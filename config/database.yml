@@ -1,19 +1,20 @@
+<% application_name = "skeleton" %>
 development: &development
   adapter: postgresql
   encoding: utf8
   reconnect: false
-  database: rubyup_development
+  database: <%= application_name %>_development
   pool: 5
   username: postgres
   password: password
   
 test: &test
-  database: rubyup_test
+  database: <%= application_name %>_test
   <<: *development
   
 cucumber:
   <<: *test
   
 production:
-  database: rubyup_production
+  database: <%= application_name %>_production
   <<: *development
