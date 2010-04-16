@@ -1,2 +1,0 @@
-class HomePageController < ApplicationController
-end

@@ -1,3 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.root :controller => "home_page"
+  Clearance::Routes.draw(map)
+  map.root :controller => "home"
 end

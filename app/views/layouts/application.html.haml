@@ -1,0 +1,13 @@
+!!!xml
+!!!
+%html
+  %head
+  %body
+    #header
+      - if signed_in?
+        = link_to "Sign out", sign_out_path
+      - else
+        = link_to "Sign up", sign_up_path
+        = link_to "Sign in", sign_in_path
+    = render "layouts/flashes"
+    = yield
